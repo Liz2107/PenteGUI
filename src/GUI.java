@@ -12,12 +12,13 @@ public class GUI implements ActionListener
 {
 	private JFrame frame = new JFrame();
 	private JPanel panel = new JPanel();
-	private JLabel greeting = new JLabel("PENTE");
+	private JLabel pOneInstructions = new JLabel("Player 1's Move");
+	private JLabel pTwoInstructions = new JLabel("Player 2's Move");
 	public GUI()
 	{
 		panel.setBorder(BorderFactory.createEmptyBorder(30, 30, 30, 30));
-		panel.setLayout(new GridLayout(0, 1));
-		panel.add(greeting);
+		panel.setLayout(new GridLayout(18, 18));
+		panel.add(pOneInstructions);
 		
 		frame.add(panel, BorderLayout.CENTER);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
