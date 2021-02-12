@@ -118,55 +118,866 @@ public class GUI implements ActionListener
 	private JButton b88 = new JButton("+");
 	public GUI()
 	{
-		b00.addActionListener(this);
-		b01.addActionListener(this);
-		b02.addActionListener(this);
-		b03.addActionListener(this);
-		b04.addActionListener(this);
-		b05.addActionListener(this);
-		b06.addActionListener(this);
-		b07.addActionListener(this);
-		b08.addActionListener(this);
 		
-		b10.addActionListener(this);
-		b11.addActionListener(this);
-		b12.addActionListener(this);
-		b13.addActionListener(this);
-		b14.addActionListener(this);
-		b15.addActionListener(this);
-		b16.addActionListener(this);
-		b17.addActionListener(this);
-		b18.addActionListener(this);
+		b00.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[0][0] == '+')
+			{
+				b00.setBackground(Color.YELLOW);
+				GridTracker.grid[0][0] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[0][0] == '+')
+			{
+				b00.setBackground(Color.RED);
+				GridTracker.grid[0][0] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				//display error message- probably through setText with instructions label
+			}
+				
+			}});
+		b01.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[0][1] == '+')
+			{
+				b01.setBackground(Color.YELLOW);
+				GridTracker.grid[0][1] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[0][1] == '+')
+			{
+				b01.setBackground(Color.RED);
+				GridTracker.grid[0][1] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b02.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[0][2] == '+')
+			{
+				b02.setBackground(Color.YELLOW);
+				GridTracker.grid[0][2] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[0][2] == '+')
+			{
+				b02.setBackground(Color.RED);
+				GridTracker.grid[0][2] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b03.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[0][3] == '+')
+			{
+				b03.setBackground(Color.YELLOW);
+				GridTracker.grid[0][3] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[0][3] == '+')
+			{
+				b03.setBackground(Color.RED);
+				GridTracker.grid[0][3] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b04.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[0][4] == '+')
+			{
+				b04.setBackground(Color.YELLOW);
+				GridTracker.grid[0][4] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[0][4] == '+')
+			{
+				b04.setBackground(Color.RED);
+				GridTracker.grid[0][4] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b05.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[0][5] == '+')
+			{
+				b05.setBackground(Color.YELLOW);
+				GridTracker.grid[0][5] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[0][5] == '+')
+			{
+				b05.setBackground(Color.RED);
+				GridTracker.grid[0][5] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b06.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[0][6] == '+')
+			{
+				b06.setBackground(Color.YELLOW);
+				GridTracker.grid[0][6] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[0][6] == '+')
+			{
+				b06.setBackground(Color.RED);
+				GridTracker.grid[0][6] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b07.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[0][7] == '+')
+			{
+				b07.setBackground(Color.YELLOW);
+				GridTracker.grid[0][7] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[0][7] == '+')
+			{
+				b07.setBackground(Color.RED);
+				GridTracker.grid[0][7] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b08.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[0][8] == '+')
+			{
+				b08.setBackground(Color.YELLOW);
+				GridTracker.grid[0][8] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[0][8] == '+')
+			{
+				b08.setBackground(Color.RED);
+				GridTracker.grid[0][8] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
 		
-		b20.addActionListener(this);
-		b21.addActionListener(this);
-		b22.addActionListener(this);
-		b23.addActionListener(this);
-		b24.addActionListener(this);
-		b25.addActionListener(this);
-		b26.addActionListener(this);
-		b27.addActionListener(this);
-		b28.addActionListener(this);
+		b10.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[1][0] == '+')
+			{
+				b10.setBackground(Color.YELLOW);
+				GridTracker.grid[1][0] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[1][0] == '+')
+			{
+				b10.setBackground(Color.RED);
+				GridTracker.grid[1][0] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b11.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[1][1] == '+')
+			{
+				b11.setBackground(Color.YELLOW);
+				GridTracker.grid[1][1] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[1][1] == '+')
+			{
+				b11.setBackground(Color.RED);
+				GridTracker.grid[1][1] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b12.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[1][2] == '+')
+			{
+				b12.setBackground(Color.YELLOW);
+				GridTracker.grid[1][2] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[1][2] == '+')
+			{
+				b12.setBackground(Color.RED);
+				GridTracker.grid[1][2] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b13.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[1][3] == '+')
+			{
+				b13.setBackground(Color.YELLOW);
+				GridTracker.grid[1][3] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[1][3] == '+')
+			{
+				b13.setBackground(Color.RED);
+				GridTracker.grid[1][3] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b14.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[1][4] == '+')
+			{
+				b14.setBackground(Color.YELLOW);
+				GridTracker.grid[1][4] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[1][4] == '+')
+			{
+				b14.setBackground(Color.RED);
+				GridTracker.grid[1][4] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b15.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[1][5] == '+')
+			{
+				b15.setBackground(Color.YELLOW);
+				GridTracker.grid[1][5] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[1][5] == '+')
+			{
+				b15.setBackground(Color.RED);
+				GridTracker.grid[1][5] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b16.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[1][6] == '+')
+			{
+				b16.setBackground(Color.YELLOW);
+				GridTracker.grid[1][6] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[1][6] == '+')
+			{
+				b16.setBackground(Color.RED);
+				GridTracker.grid[1][6] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b17.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[1][7] == '+')
+			{
+				b17.setBackground(Color.YELLOW);
+				GridTracker.grid[1][7] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[1][7] == '+')
+			{
+				b17.setBackground(Color.RED);
+				GridTracker.grid[1][7] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b18.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[1][8] == '+')
+			{
+				b18.setBackground(Color.YELLOW);
+				GridTracker.grid[1][8] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[1][8] == '+')
+			{
+				b18.setBackground(Color.RED);
+				GridTracker.grid[1][8] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
 		
-		b30.addActionListener(this);
-		b31.addActionListener(this);
-		b32.addActionListener(this);
-		b33.addActionListener(this);
-		b34.addActionListener(this);
-		b35.addActionListener(this);
-		b36.addActionListener(this);
-		b37.addActionListener(this);
-		b38.addActionListener(this);
+		b20.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[2][0] == '+')
+			{
+				b20.setBackground(Color.YELLOW);
+				GridTracker.grid[2][0] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[2][0] == '+')
+			{
+				b20.setBackground(Color.RED);
+				GridTracker.grid[2][0] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b21.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[2][1] == '+')
+			{
+				b21.setBackground(Color.YELLOW);
+				GridTracker.grid[2][1] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[2][1] == '+')
+			{
+				b21.setBackground(Color.RED);
+				GridTracker.grid[2][1] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b22.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[2][2] == '+')
+			{
+				b22.setBackground(Color.YELLOW);
+				GridTracker.grid[2][2] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[2][2] == '+')
+			{
+				b22.setBackground(Color.RED);
+				GridTracker.grid[2][2] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b23.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[2][3] == '+')
+			{
+				b23.setBackground(Color.YELLOW);
+				GridTracker.grid[2][3] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[2][3] == '+')
+			{
+				b23.setBackground(Color.RED);
+				GridTracker.grid[2][3] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b24.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[2][4] == '+')
+			{
+				b24.setBackground(Color.YELLOW);
+				GridTracker.grid[2][4] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[2][4] == '+')
+			{
+				b24.setBackground(Color.RED);
+				GridTracker.grid[2][4] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b25.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[2][5] == '+')
+			{
+				b25.setBackground(Color.YELLOW);
+				GridTracker.grid[2][5] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[2][5] == '+')
+			{
+				b25.setBackground(Color.RED);
+				GridTracker.grid[2][5] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b26.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[2][6] == '+')
+			{
+				b26.setBackground(Color.YELLOW);
+				GridTracker.grid[2][6] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[2][6] == '+')
+			{
+				b26.setBackground(Color.RED);
+				GridTracker.grid[2][6] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b27.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[2][7] == '+')
+			{
+				b27.setBackground(Color.YELLOW);
+				GridTracker.grid[2][7] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[2][7] == '+')
+			{
+				b27.setBackground(Color.RED);
+				GridTracker.grid[2][7] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b28.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[2][8] == '+')
+			{
+				b28.setBackground(Color.YELLOW);
+				GridTracker.grid[2][8] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[2][8] == '+')
+			{
+				b28.setBackground(Color.RED);
+				GridTracker.grid[2][8] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
 		
-		b40.addActionListener(this);
-		b41.addActionListener(this);
-		b42.addActionListener(this);
-		b43.addActionListener(this);
-		b44.addActionListener(this);
-		b45.addActionListener(this);
-		b46.addActionListener(this);
-		b47.addActionListener(this);
-		b48.addActionListener(this);
+		b30.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[3][0] == '+')
+			{
+				b30.setBackground(Color.YELLOW);
+				GridTracker.grid[3][0] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[3][0] == '+')
+			{
+				b30.setBackground(Color.RED);
+				GridTracker.grid[3][0] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b31.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[3][1] == '+')
+			{
+				b31.setBackground(Color.YELLOW);
+				GridTracker.grid[3][1] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[3][1] == '+')
+			{
+				b31.setBackground(Color.RED);
+				GridTracker.grid[3][1] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b32.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[3][2] == '+')
+			{
+				b32.setBackground(Color.YELLOW);
+				GridTracker.grid[3][2] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[3][2] == '+')
+			{
+				b32.setBackground(Color.RED);
+				GridTracker.grid[3][2] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b33.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[3][3] == '+')
+			{
+				b33.setBackground(Color.YELLOW);
+				GridTracker.grid[3][3] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[3][3] == '+')
+			{
+				b33.setBackground(Color.RED);
+				GridTracker.grid[3][3] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b34.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[3][4] == '+')
+			{
+				b34.setBackground(Color.YELLOW);
+				GridTracker.grid[3][4] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[3][4] == '+')
+			{
+				b34.setBackground(Color.RED);
+				GridTracker.grid[3][4] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b35.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[3][5] == '+')
+			{
+				b35.setBackground(Color.YELLOW);
+				GridTracker.grid[3][5] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[3][5] == '+')
+			{
+				b35.setBackground(Color.RED);
+				GridTracker.grid[3][5] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b36.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[3][6] == '+')
+			{
+				b36.setBackground(Color.YELLOW);
+				GridTracker.grid[3][6] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[3][6] == '+')
+			{
+				b36.setBackground(Color.RED);
+				GridTracker.grid[3][6] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b37.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[3][7] == '+')
+			{
+				b37.setBackground(Color.YELLOW);
+				GridTracker.grid[3][7] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[3][7] == '+')
+			{
+				b37.setBackground(Color.RED);
+				GridTracker.grid[3][7] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b38.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[3][8] == '+')
+			{
+				b38.setBackground(Color.YELLOW);
+				GridTracker.grid[3][8] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[3][8] == '+')
+			{
+				b38.setBackground(Color.RED);
+				GridTracker.grid[3][8] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		
+		b40.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[4][0] == '+')
+			{
+				b40.setBackground(Color.YELLOW);
+				GridTracker.grid[4][0] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[4][0] == '+')
+			{
+				b40.setBackground(Color.RED);
+				GridTracker.grid[4][0] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b41.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[4][1] == '+')
+			{
+				b41.setBackground(Color.YELLOW);
+				GridTracker.grid[4][1] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[4][1] == '+')
+			{
+				b41.setBackground(Color.RED);
+				GridTracker.grid[4][1] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b42.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[4][2] == '+')
+			{
+				b42.setBackground(Color.YELLOW);
+				GridTracker.grid[4][2] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[4][2] == '+')
+			{
+				b42.setBackground(Color.RED);
+				GridTracker.grid[4][2] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b43.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[4][3] == '+')
+			{
+				b43.setBackground(Color.YELLOW);
+				GridTracker.grid[4][3] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[4][3] == '+')
+			{
+				b43.setBackground(Color.RED);
+				GridTracker.grid[4][3] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b44.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[4][4] == '+')
+			{
+				b44.setBackground(Color.YELLOW);
+				GridTracker.grid[4][4] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[4][4] == '+')
+			{
+				b44.setBackground(Color.RED);
+				GridTracker.grid[4][4] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b45.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[4][5] == '+')
+			{
+				b45.setBackground(Color.YELLOW);
+				GridTracker.grid[4][5] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[4][5] == '+')
+			{
+				b45.setBackground(Color.RED);
+				GridTracker.grid[4][5] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b46.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[4][6] == '+')
+			{
+				b46.setBackground(Color.YELLOW);
+				GridTracker.grid[4][6] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[4][6] == '+')
+			{
+				b46.setBackground(Color.RED);
+				GridTracker.grid[4][6] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b47.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[4][7] == '+')
+			{
+				b47.setBackground(Color.YELLOW);
+				GridTracker.grid[4][7] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[4][7] == '+')
+			{
+				b47.setBackground(Color.RED);
+				GridTracker.grid[4][7] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
+		b48.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {
+			if(p1Turn && GridTracker.grid[4][8] == '+')
+			{
+				b48.setBackground(Color.YELLOW);
+				GridTracker.grid[4][8] = '1';
+				p1Turn = false;
+			}
+			else if(GridTracker.grid[4][8] == '+')
+			{
+				b48.setBackground(Color.RED);
+				GridTracker.grid[4][8] = '2';
+				p1Turn = true;
+			}
+			else
+			{
+				
+			}
+				
+			}});
 		
 		b50.addActionListener(this);
 		b51.addActionListener(this);
@@ -313,14 +1124,11 @@ public class GUI implements ActionListener
 	
 	public void actionPerformed(ActionEvent e)
 	{
-//		if(p1Turn)
-//		{
-//			if(e.getSource() == "b00")
-//				b00.setBackground(Color.red);
-//		}
-//		else
-//		{
-//			
-//		}
+		if(e.getSource() == "b00")
+		{
+			b00.setBackground(Color.CYAN);
+			panel.add(pTwoInstructions);
+			System.out.println("Button pressed");
+		}
 	}
 }
