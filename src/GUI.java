@@ -17,6 +17,7 @@ public class GUI implements ActionListener
 	private JPanel panel = new JPanel();
 	private JLabel pOneInstructions = new JLabel("Player 1's Move");
 	private JLabel pTwoInstructions = new JLabel("Player 2's Move");
+	private JLabel gameOverMessage = new JLabel("Game Over");
 //	private JLabel one = new JLabel("1");
 //	private JLabel two = new JLabel("2");
 //	private JLabel three = new JLabel("3");
@@ -116,6 +117,7 @@ public class GUI implements ActionListener
 	private JButton b86 = new JButton("+");
 	private JButton b87 = new JButton("+");
 	private JButton b88 = new JButton("+");
+	
 	public static void ifPressed(JButton b, int row, int col)
 	{
 		if(p1Turn && GridTracker.grid[row][col] == '+')
@@ -136,6 +138,10 @@ public class GUI implements ActionListener
 		}
 			
 	Logistics.checkWin(row, col);	
+//	if(Logistics.gameOver)
+//	{
+//		panel.close();
+//	}
 	}
 	public GUI()
 	{
@@ -323,7 +329,7 @@ public class GUI implements ActionListener
 		panel.add(b86);
 		panel.add(b87);
 		panel.add(b88);
-		//panel.add(pOneInstructions);
+		
 		
 		
 		frame.add(panel, BorderLayout.CENTER);

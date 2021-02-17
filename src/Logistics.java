@@ -6,7 +6,7 @@ public class Logistics {
 		int horCount = 0;
 		for(int i = 0; i <= 8; i++)
 		{
-			System.out.println(row + " " + col);
+			//System.out.println(row + " " + col);
 			if(GridTracker.grid[row][i] == GridTracker.grid[row][col])
 				horCount ++;
 			else
@@ -73,8 +73,9 @@ public class Logistics {
 		startCol = col;
 		int diagLHCount = 0;
 		//find starting row and col values
-		if(!(startRow >= 15 && startCol >= 15) || (startRow < 4 && startCol < 4))
+		if(!((startRow >= 6 && startCol >= 6) || (startRow < 4 && startCol < 4)))
 		{
+			System.out.println("BOTTOM?");
 			for(int m = 0; m <= 8; m++)
 			{
 				if(startRow == 0)
