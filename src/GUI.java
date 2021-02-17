@@ -14,10 +14,11 @@ public class GUI implements ActionListener
 {
 	static boolean p1Turn = true;
 	private JFrame frame = new JFrame();
+	static JFrame endFrame = new JFrame();
 	private JPanel panel = new JPanel();
-	private JLabel pOneInstructions = new JLabel("Player 1's Move");
-	private JLabel pTwoInstructions = new JLabel("Player 2's Move");
-	private JLabel gameOverMessage = new JLabel("Game Over");
+	private JPanel gameOverScreen = new JPanel();
+	private JButton resetButton = new JButton("Play Again");
+	private JLabel gameOverMessage = new JLabel("     Game Over");
 //	private JLabel one = new JLabel("1");
 //	private JLabel two = new JLabel("2");
 //	private JLabel three = new JLabel("3");
@@ -145,6 +146,10 @@ public class GUI implements ActionListener
 	}
 	public GUI()
 	{
+		resetButton.addActionListener(new ActionListener() {public void actionPerformed(ActionEvent e) {
+			panel.setVisible(false);
+			frame.dispose();
+			new GUI();}});
 		
 		b00.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {ifPressed(b00, 0, 0);}});
 		b01.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {ifPressed(b01, 0, 1);}});
@@ -236,8 +241,9 @@ public class GUI implements ActionListener
 		b87.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {ifPressed(b87, 8, 7);}});
 		b88.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) {ifPressed(b88, 8, 8);}});
 		
+		gameOverScreen.setBorder(BorderFactory.createEmptyBorder(100, 100, 100, 100));
 		panel.setBorder(BorderFactory.createEmptyBorder(100, 100, 100, 100));
-		
+		gameOverScreen.setLayout(new GridLayout(2, 3));
 		panel.setLayout(new GridLayout(9, 9, 2, 10));
 		
 		panel.add(b00);
@@ -331,12 +337,22 @@ public class GUI implements ActionListener
 		panel.add(b88);
 		
 		
+		gameOverScreen.add(gameOverMessage);
+		gameOverScreen.add(resetButton);
+		
 		
 		frame.add(panel, BorderLayout.CENTER);
+		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setTitle("PENTE");
 		frame.pack();
 		frame.setVisible(true);
+		
+		endFrame.add(gameOverScreen, (BorderLayout.CENTER));
+		endFrame.setTitle("GAME OVER");
+		endFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		endFrame.pack();
+		endFrame.setVisible(false);
 	}
 	
 	public void actionPerformed(ActionEvent e)
