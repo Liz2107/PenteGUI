@@ -13,7 +13,12 @@ public class Logistics {
 				horCount = 0;
 			
 			if(horCount >= 5)
-				System.out.println("Game over");//set game over message
+			{
+				GUI.endFrame.setVisible(true);//set game over message
+				System.out.println("Game over, hor win");
+				
+			}
+				
 		}
 		
 		//vert check- loop through col and check if matches input symbol 4+ consecutive times
@@ -73,9 +78,9 @@ public class Logistics {
 		startCol = col;
 		int diagLHCount = 0;
 		//find starting row and col values
-		if(!((startRow >= 6 && startCol >= 6) || (startRow < 4 && startCol < 4)))
+		if(!((startRow >= 6 && startCol >= 6) || (startRow < 2 && startCol < 2)))
 		{
-			System.out.println("BOTTOM?");
+			System.out.println("found values");
 			for(int m = 0; m <= 8; m++)
 			{
 				if(startRow == 0)
@@ -120,20 +125,23 @@ public class Logistics {
 			}
 			else
 			{
+				System.out.println("inside else condition");
 				if(startRow > startCol)
 					start = startRow;
 				else
-					start = startCol;
+					start = startRow;
 				if(startCol == 8)
 				{
 					start = startRow;
 				}
+				System.out.println("Start value: " + start);
 				for(int n = start; n < 9; n++)
 				{
 					System.out.println(startRow + " " + startCol);
 					if(startRow < 0 || startCol < 0)
 					{
 						n = 18;
+						System.out.println("Stopped loop");
 					}
 					else
 					{
